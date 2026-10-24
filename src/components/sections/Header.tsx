@@ -41,6 +41,7 @@ export function Header({ locale, dict, onOpenQuiz }: HeaderProps) {
   }, []);
 
   useEffect(() => {
+    document.documentElement.lang = locale;
     if (locale !== "fr") {
       setShowEnglishPrompt(false);
       return;

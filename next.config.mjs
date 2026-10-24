@@ -12,6 +12,22 @@ const nextConfig = {
     formats: ["image/avif", "image/webp"],
   },
   poweredByHeader: false,
+  async rewrites() {
+    return [
+      {
+        source: "/",
+        destination: "/fr",
+      },
+      {
+        source: "/mentions-legales",
+        destination: "/fr/mentions-legales",
+      },
+      {
+        source: "/confidentialite",
+        destination: "/fr/confidentialite",
+      },
+    ];
+  },
 };
 
 export default withNextIntl(nextConfig);
